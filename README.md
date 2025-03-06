@@ -1,4 +1,4 @@
-# mcp-copy-web-ui MCP Server
+# mcp-copy-web-ui
 
 This is an MCP server that helps download and analyze websites for UI/UX inspiration. It captures the complete HTML content of a website, including all CSS, images, and other resources, making them available for analysis by Claude.
 
