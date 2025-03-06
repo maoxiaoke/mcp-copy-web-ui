@@ -20,46 +20,20 @@ Example usage in Claude:
 I'd like to get inspiration from example.com's design
 ```
 
-## Development
+## How to Use
 
-Install dependencies:
-```bash
-npm install
-```
-
-Build the server:
-```bash
-npm run build
-```
-
-For development with auto-rebuild:
-```bash
-npm run watch
-```
-
-## Installation
-
-To use with Claude Desktop, add the server config:
-
-On MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+### NPX
 
 ```json
 {
   "mcpServers": {
-    "mcp-copy-web-ui": {
-      "command": "/path/to/mcp-copy-web-ui/build/index.js"
+    "mediaProcessor": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "create-mcp-server@latest"
+      ]
     }
   }
 }
 ```
-
-### Debugging
-
-Since MCP servers communicate over stdio, debugging can be challenging. We recommend using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
-
-```bash
-npm run inspector
-```
-
-The Inspector will provide a URL to access debugging tools in your browser. 
