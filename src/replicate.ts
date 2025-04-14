@@ -122,14 +122,14 @@ export async function downloadCompleteHTML(url: string): Promise<string> {
     // Inline all external CSS files
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
 
-    for (const link of Array.from(stylesheets)) {
-      if (!(link instanceof dom.window.HTMLLinkElement)) continue;
+    // for (const link of Array.from(stylesheets)) {
+    //   if (!(link instanceof dom.window.HTMLLinkElement)) continue;
       
-      const inlineStyleElement = await inlineCSS(link, url);
-      if (inlineStyleElement && link.parentNode) {
-        link.parentNode.replaceChild(inlineStyleElement, link);
-      }
-    }
+    //   const inlineStyleElement = await inlineCSS(link, url);
+    //   if (inlineStyleElement && link.parentNode) {
+    //     link.parentNode.replaceChild(inlineStyleElement, link);
+    //   }
+    // }
 
     // Inline all images as base64 data URIs
     // await inlineImages(document.documentElement, url);
